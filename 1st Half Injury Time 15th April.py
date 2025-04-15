@@ -11,7 +11,7 @@ import numpy as np
 import streamlit as st
 
 # === Load data ===
-file_path = r"C:\Users\Sukhdeep.Sangha\OneDrive - Entain Group\1st Half Inj Time 14th April.csv"
+file_path ="1st Half Inj Time 14th April.csv"
 df = pd.read_csv(file_path)
 
 # === Sidebar filters ===
