@@ -82,8 +82,12 @@ bar_under = ax1.bar(x, summary_df['Freq_Under'], bottom=summary_df['Freq_Over'],
                     color='orange', edgecolor='black', label='Under')
 
 ax1.set_ylabel("Frequency of Bets")
-ax1.set_ylim(0, 350)
-ax1.set_yticks(np.arange(0, 351, 20))
+if market_filter == "Total Corners":
+    ax1.set_ylim(0, 1500)
+    ax1.set_yticks(np.arange(0, 1501, 100))
+else:
+    ax1.set_ylim(0, 350)
+    ax1.set_yticks(np.arange(0, 351, 20))
 ax1.set_xticks(x)
 ax1.set_xticklabels(summary_df['Bin'], fontsize=10)
 ax1.set_xlabel("Magnitude of 1st Half Injury Time Change")
